@@ -6,8 +6,7 @@ const setUsersData = (data) => ({
 })
 
 
-
-const fetchData = () => (dispatch, getState) => {
+export const fetchUsersData = () => (dispatch, getState) => {
     fetch('https://randomuser.me/api/?results=10')
         .then(response => response.json())
         .then(data => dispatch(setUsersData(data)))
@@ -19,11 +18,13 @@ const initialState = {
 
 
 export default (state = initialState, action) => {
-    switch (action.type){
-        return {
-            ..state,
-                usersData: action.data
-        }
+    switch (action.type) {
+        case SET_USERS_DATA:
+            return {
+                ...state,
+                usersData:
+                action.data.results
+            }
         default:
             return state
     }
