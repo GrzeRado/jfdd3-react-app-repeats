@@ -1,11 +1,11 @@
 import React from 'react'
-import UsersList from
+import UsersList from './components/UsersList'
 
 import {connect} from 'react-redux'
 
 const App = (props) => (
     <div>
-        <UsersList userData={props.userData}/>
+        <UsersList usersData={props.usersData}/>
     </div>
 )
 
