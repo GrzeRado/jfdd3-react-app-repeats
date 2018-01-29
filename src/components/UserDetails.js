@@ -1,18 +1,38 @@
 import React from 'react'
+import {withRouter} from 'react-router-dom'
 
-const UserDetails = props => (
-const arryWithUsers = props.usersData
-const currentUserEmail = props.match.params.emai
-const currentUserData = arrayWithUsers.filter(
-    user => user.email === currentUserEmail
-)[0]
-return (
-    <div>
-        {
-            JSON.stringify(currentUserData)
-        }
+const UserDetails = props => {
+    const arrayWithUsers = props.usersData || []
+    const currentUserEmail = props.match.params.email
+    console.log(props)
+    const currentUserData = arrayWithUsers.find(
+        user => user.email === currentUserEmail
+    )
 
-    </div>
-)
+    return (
+        <div>
+            {
+                currentUserData ?
+                    <div>
+                        <div>
+                            <img src={currentUserData.picture.large} alt=""/>
+                        </div>
+                        <div>
+                            {currentUserData.name.first}
+                        </div>
+                        <div>
+                            {currentUserData.name.last}
+                        </div>
+                        <div>
+                            {currentUserData.email}
+                        </div>
+                    </div>
+                    :
+                    'Nie ma takiego użytkownika w bazie!'
+            }
 
-export default UserDetails
+        </div>
+    )
+}
+
+export default withRouter(UserDetails)
