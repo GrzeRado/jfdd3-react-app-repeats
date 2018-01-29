@@ -8,8 +8,10 @@ const App = (props) => (
             props.usersData
             &&
             props.usersData.map(user => (
-                <div>
-                    przykladowe dane
+                <div
+                    key={user.email}
+                >
+                    {user.name.first} {user.name.last}
                 </div>
             ))
         }
