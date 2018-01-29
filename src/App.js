@@ -2,6 +2,7 @@ import React from 'react'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 
 import UsersList from './components/UsersList'
+import UserDetails from './components/UserDetails'
 
 
 import {connect} from 'react-redux'
@@ -9,10 +10,10 @@ import {connect} from 'react-redux'
 const App = (props) => (
     <Router>
     <div>
-        <Route patch="/" exact render={() => (
+        <Route path="/" exact render={() => (
         <UsersList usersData={props.usersData}/>
             )} />
-        <Route patch="/user-details/:email" component={UserDetails}/>
+        <Route path="/user-details/:email" component={UserDetails}/>
     </div>
     </Router>
 )
