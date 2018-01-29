@@ -11,4 +11,6 @@ const mapStateToProps = state => ({
     usersData: state.users.usersData
 })
 
-export default App
+export default connect(
+    mapStateToProps
+    )(App)
