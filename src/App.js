@@ -2,14 +2,15 @@ import React from 'react'
 
 import {connect} from 'react-redux'
 
-
 const App = (props) => (
     <div>
         {
             props.usersData
             &&
             props.usersData.map(user => (
-                <div><div>
+                <div>
+                    przykladowe dane
+                </div>
             ))
         }
     </div>
@@ -21,4 +22,4 @@ const mapStateToProps = state => ({
 
 export default connect(
     mapStateToProps
-    )(App)
+)(App)

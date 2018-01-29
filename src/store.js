@@ -1,8 +1,6 @@
 import {createStore, combineReducers, applyMiddleware, compose} from 'redux'
 import thunk from 'redux-thunk'
-import usersReducer from './state/users'
-
-import userReducer, {fetchUsersData} from './state/users'
+import usersReducer, {fetchUsersData} from './state/users'
 
 const reducer = combineReducers({
     users: usersReducer
@@ -17,6 +15,6 @@ const store = createStore(
     )
 )
 
-store.dispatch(fetchUsersData)
+store.dispatch(fetchUsersData())
 
 export default store
