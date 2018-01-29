@@ -13,7 +13,9 @@ const App = (props) => (
         <Route path="/" exact render={() => (
         <UsersList usersData={props.usersData}/>
             )} />
-        <Route path="/user-details/:email" component={UserDetails}/>
+        /*<Route path="/user-details/:email" component={UserDetails}/>*/
+        <Route path="/user-details/:email" render={() => (
+            <UserDetails userData={props.userData}/>
     </div>
     </Router>
 )
