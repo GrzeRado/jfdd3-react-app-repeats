@@ -12,7 +12,7 @@ const App = (props) => (
         <Route patch="/" exact render={() => (
         <UsersList usersData={props.usersData}/>
             )} />
-
+        <Route patch="/user-details/:email" component={UserDetails}/>
     </div>
     </Router>
 )
