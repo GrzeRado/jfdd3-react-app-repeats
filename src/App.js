@@ -6,7 +6,9 @@ import {connect} from 'react-redux'
 const App = (props) => (
     <div>
         {
-            prop.usersData.map(user => (
+            props.usersData
+            &&
+            props.usersData.map(user => (
                 <div><div>
             ))
         }
