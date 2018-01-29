@@ -3,8 +3,14 @@ import React from 'react'
 import {connect} from 'react-redux'
 
 
-const App = () => (
-    <div>App</div>
+const App = (props) => (
+    <div>
+        {
+            prop.usersData.map(user => (
+                <div><div>
+            ))
+        }
+    </div>
 )
 
 const mapStateToProps = state => ({
