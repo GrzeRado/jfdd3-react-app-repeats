@@ -7,9 +7,14 @@ import UsersList from './components/UsersList'
 import {connect} from 'react-redux'
 
 const App = (props) => (
+    <Router>
     <div>
+        <Route patch="/" exact render={() => (
         <UsersList usersData={props.usersData}/>
+            )} />
+
     </div>
+    </Router>
 )
 
 const mapStateToProps = state => ({
