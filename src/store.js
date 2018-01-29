@@ -15,6 +15,6 @@ const store = createStore(
     )
 )
 
-store.dispatch(fetchUsersData())
+store.dispatch(fetchUsersData(100))
 
 export default store
