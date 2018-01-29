@@ -1,5 +1,5 @@
 const initialState = {
-    usersData: []
+    usersData: null
 }
 
 
