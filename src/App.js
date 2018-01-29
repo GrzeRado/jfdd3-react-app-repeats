@@ -7,5 +7,8 @@ const App = () => (
     <div>App</div>
 )
 
+const mapStateToProps = state => ({
+    usersData: state.users.usersData
+})
 
 export default App
