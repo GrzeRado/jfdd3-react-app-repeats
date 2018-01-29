@@ -5,6 +5,13 @@ const reducer = combineReducers({
 
 })
 
+import userReducer from './state/users'
+
+
+const reducer = combineReducers({
+    users: usersReducer
+})
+
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(
