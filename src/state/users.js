@@ -1,3 +1,7 @@
+const fetchData = () => (dispatch, getState) => {
+
+}
+
 const initialState = {
     usersData: null
 }
